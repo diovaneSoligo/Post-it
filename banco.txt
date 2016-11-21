@@ -1,0 +1,22 @@
+nome banco:
+>> postit
+
+Tabelas:
+
+create table usuario(
+	idUser serial,
+	nome varchar(20),
+	senha varchar(20),
+	email varchar(50),
+	primary key (nome)
+);
+
+create table postit(
+	idPostit serial,
+	nome varchar(20),
+	titulo varchar(50),
+	data varchar (50),
+	descricao varchar (500),
+	primary key (idPostit),
+	foreign key (nome) references usuario (nome)
+);
